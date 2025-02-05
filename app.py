@@ -1,12 +1,18 @@
 from modelos.restaurante import Restaurante
+from modelos.cardapio.prato import Prato
+from modelos.cardapio.bebida import Bebida
 
 restaurante_praca = Restaurante('praça', 'Gourmet')
-restaurante_praca.receber_avaliacao('Gui', 10)
-restaurante_praca.receber_avaliacao('Lais', 8)
-restaurante_praca.receber_avaliacao('Emy', 2)
+bebida_suco = Bebida('Suco de beterraba', 13.0, 'Grande')
+prato_feijoada = Prato('Pão', 2.0, 'Cacetinho de feijão')
+restaurante_praca.adicionar_no_cardapio(bebida_suco)
+restaurante_praca.adicionar_no_cardapio(prato_feijoada)
 
 def main():
-    Restaurante.listar_restaurantes()
+    # Não chamar como restaurante_praca.exibir_cardapio() pq tem o @property e se torna somente leitura
+
+    restaurante_praca.exibir_cardapio 
 
 if __name__ == '__main__':
     main()
+    
